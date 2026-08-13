@@ -17,6 +17,7 @@ dependencies = [
     "tqdm>=4.70.0",
     "matplotlib>=3.9",
     "seaborn>=0.13",
+    "httpx2>=2.10.0",
 ]
 
 [project.optional-dependencies]
