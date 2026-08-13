@@ -1,0 +1,35 @@
+[project]
+name = "loan-approval"
+version = "0.1.0"
+description = "Estimates loan approval likelihood at Truist, Wells Fargo, and Bank of America from HMDA historical data, with explainability and fair-lending checks."
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "fastapi>=0.115",
+    "uvicorn[standard]>=0.30",
+    "pandas>=2.2",
+    "scikit-learn>=1.5",
+    "shap>=0.46",
+    "joblib>=1.4",
+    "pyarrow>=17.0",
+    "python-dotenv>=1.0",
+    "requests>=2.34.2",
+    "tqdm>=4.70.0",
+    "matplotlib>=3.9",
+    "seaborn>=0.13",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "httpx>=0.27", "ruff>=0.6"]
+
+[project.scripts]
+loan-approval-api = "loan_approval.api.main:run"
+
+[build-system]
+requires = ["uv_build>=0.12.1,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "ipykernel>=7.3.0",
+]
