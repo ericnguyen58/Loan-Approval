@@ -4,7 +4,6 @@ import uvicorn
 from fastapi import FastAPI, Request
 from fastapi.exceptions import RequestValidationError
 from fastapi.responses import JSONResponse
-
 from loan_approval.api.routes import router
 
 app = FastAPI(title="Let Me Have a Loan", version="0.1.0")
